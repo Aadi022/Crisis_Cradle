@@ -1,0 +1,174 @@
+/* Mainpage.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #f0f0f0;
+}
+
+.topbar {
+    background-color: #d3d3d3;
+    height: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: fixed; /* Makes it stick to the top */
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.logo {
+    width: 200px;
+    height: 160px;  /* Adjust the height of your logo */
+    margin-right: 150px;  /* Adjust space between the logo and buttons */
+}
+
+.topbar button {
+    margin: 0 40px; /* Medium distance between buttons */
+    padding: 15px 30px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: 80px;
+    width: 190px;
+}
+
+.topbar button:hover {
+    transform: scale(1.1); /* Pop-up effect */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.signin {
+    margin-top: -50px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.donate {
+    background-color: #ff9800;
+    color: white;
+}
+
+.reportdiv {
+    display: none; /* Report button has been moved to topbar, so this is no longer needed */
+}
+
+.report {
+    padding: 20px 40px; /* Bigger than signin and donate */
+    font-size: 18px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: 100px;
+    width: 300px;
+}
+
+.report:hover {
+    transform: scale(1.1); /* Pop-up effect */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+
+.aim {
+    margin-top: 100px; /* Adjusted to compensate for button position switch */
+    text-align: center;
+    font-size: 48px; /* Increased font size for better visibility */
+    font-weight: 700; /* Make the text bold */
+    color: #2c3e50; /* A deep blue-gray color */
+    text-transform: uppercase; /* Make all text uppercase for emphasis */
+    letter-spacing: 2px; /* Add some spacing between letters */
+    margin-bottom: 20px;
+}
+
+.aimpng {
+    height: 400px;
+    width: 1200px;
+    margin-left: 170px;
+    margin-bottom: 100px;
+}
+
+.admindiv {
+    margin-top: 300px; /* Ensure that the button appears below the topbar */
+    display: flex;
+    justify-content: center;
+}
+
+.admindiv button {
+    padding: 15px 30px;
+    font-size: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: 80px;
+    width: 250px;
+}
+
+.admindiv button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.about-card {
+    background-color: #dcebed;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+
+.about-card p {
+    font-size: 20px;
+    color: #666;
+}
+
+.aboutus {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 48px; /* Increased font size for better visibility */
+    font-weight: 700; /* Make the text bold */
+    color: #2c3e50; /* A deep blue-gray color */
+    text-transform: uppercase; /* Make all text uppercase for emphasis */
+    letter-spacing: 2px; /* Add some spacing between letters */
+}
+
+
+.whatwedo-card {
+    background-color: #dcebed;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+.whatwedo-card p {
+    font-size: 20px;
+    color: #666;
+}
+
+.whatwedo {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 48px; /* Increased font size for better visibility */
+    font-weight: 700; /* Make the text bold */
+    color: #2c3e50; /* A deep blue-gray color */
+    text-transform: uppercase; /* Make all text uppercase for emphasis */
+    letter-spacing: 2px; /* Add some spacing between letters */
+}
