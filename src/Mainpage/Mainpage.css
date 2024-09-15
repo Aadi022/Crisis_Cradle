@@ -26,7 +26,7 @@ body, html {
 }
 
 .topbar button {
-    margin: 0 40px; /* Medium distance between buttons */
+    margin: 0 20px; /* Adjusted to create space for the Sign in button */
     padding: 15px 30px;
     font-size: 20px;
     border: none;
@@ -43,7 +43,6 @@ body, html {
 }
 
 .signin {
-    margin-top: -50px;
     background-color: #4CAF50;
     color: white;
 }
@@ -51,10 +50,6 @@ body, html {
 .donate {
     background-color: #ff9800;
     color: white;
-}
-
-.reportdiv {
-    display: none; /* Report button has been moved to topbar, so this is no longer needed */
 }
 
 .report {
@@ -75,9 +70,8 @@ body, html {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
 }
 
-
 .aim {
-    margin-top: 100px; /* Adjusted to compensate for button position switch */
+    margin-top: 180px; /* Adjusted to compensate for topbar */
     text-align: center;
     font-size: 48px; /* Increased font size for better visibility */
     font-weight: 700; /* Make the text bold */
@@ -92,34 +86,15 @@ body, html {
     width: 1200px;
     margin-left: 170px;
     margin-bottom: 100px;
+    transition: all 0.3s ease; /* Smooth transition */
 }
 
-.admindiv {
-    margin-top: 300px; /* Ensure that the button appears below the topbar */
-    display: flex;
-    justify-content: center;
+.aimpng:hover {
+    transform: scale(1.05); /* Slight pop-up effect */
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
-.admindiv button {
-    padding: 15px 30px;
-    font-size: 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    height: 80px;
-    width: 250px;
-}
-
-.admindiv button:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-
-.about-card {
+.about-card, .whatwedo-card {
     background-color: #dcebed;
     padding: 20px;
     margin: 20px auto;
@@ -128,26 +103,16 @@ body, html {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     margin-bottom: 80px;
+    transition: all 0.3s ease;
 }
 
-
-.about-card p {
-    font-size: 20px;
-    color: #666;
+.about-card:hover, .whatwedo-card:hover {
+    transform: scale(1.05); /* Slight pop-up effect */
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
-.aboutus {
-    margin-bottom: 20px;
-    text-align: center;
-    font-size: 48px; /* Increased font size for better visibility */
-    font-weight: 700; /* Make the text bold */
-    color: #2c3e50; /* A deep blue-gray color */
-    text-transform: uppercase; /* Make all text uppercase for emphasis */
-    letter-spacing: 2px; /* Add some spacing between letters */
-}
-
-
-.whatwedo-card {
+/* Keeping ourcoverage card static without pop effect */
+.ourcoverage-card {
     background-color: #dcebed;
     padding: 20px;
     margin: 20px auto;
@@ -155,15 +120,16 @@ body, html {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    margin-bottom: 80px;
+    /* No transition or transform */
 }
 
-
-.whatwedo-card p {
+.about-card p, .whatwedo-card p {
     font-size: 20px;
     color: #666;
 }
 
-.whatwedo {
+.aboutus, .whatwedo{
     margin-bottom: 20px;
     text-align: center;
     font-size: 48px; /* Increased font size for better visibility */
@@ -171,4 +137,33 @@ body, html {
     color: #2c3e50; /* A deep blue-gray color */
     text-transform: uppercase; /* Make all text uppercase for emphasis */
     letter-spacing: 2px; /* Add some spacing between letters */
+}
+
+.ourcoverage{
+    margin-bottom: 100px;
+    text-align: center;
+    font-size: 48px; /* Increased font size for better visibility */
+    font-weight: 700; /* Make the text bold */
+    color: #2c3e50; /* A deep blue-gray color */
+    text-transform: uppercase; /* Make all text uppercase for emphasis */
+    letter-spacing: 2px; /* Add some spacing between letters */
+}
+
+/* Adjusting the images inside the Our Coverage section */
+.ourcoverage-card img {
+    width: 600px; /* Set a consistent width */
+    height: 600px; /* Set a consistent height */
+    object-fit: cover; /* Ensure the image scales properly without distortion */
+    margin-bottom: 20px; /* Add some space between images and text */
+    margin-bottom: 120px;
+    transition: all 0.3s ease;
+}
+
+.ourcoverage-card img:hover {
+    transform: scale(1.05); /* Slight pop-up effect */
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.ourcoverage-card h2 {
+    font-size: 35px;
 }
