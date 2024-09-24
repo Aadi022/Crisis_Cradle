@@ -1,7 +1,10 @@
+//Add description of disaster and add helpline number
 import React,{useState} from 'react';
 import "./Report.css";
+import { useNavigate } from 'react-router-dom';
 
 function Report(){
+    const navigate= useNavigate();
 
     const [name,setName]= useState("");
     const [state,setState]= useState("");
@@ -29,10 +32,14 @@ function Report(){
         setDisaster(event.target.value);
     }
 
+    const handlesubmit= function handlesubmit(){
+        navigate("/userchat");
+    }
+
     return(
         <>
             <h1>REPORT A DISASTER</h1>
-            <form>
+            <form onSubmit={handlesubmit}>
                 <h2>Enter Name:</h2>
                 <input placeholder="Enter Your Name" value={name} onChange={handlename}></input>
                 <h2>Enter State:</h2>

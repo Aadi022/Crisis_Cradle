@@ -17,13 +17,17 @@ function Mainpage(){
         navigate("/report");
     }
 
+    const handlesignin= function handlesignin(){
+        navigate("/signin");
+    }
+
     return(
         <>
         <div className='topbar'>
             <img src={logo} alt="logo" className='logo' />
             <button className='report' onClick={handlereport}>REPORT A DISASTER</button>
             <button className='donate'>Donate</button>
-            <button className='signin'>Sign in for Admin</button> {/* Moved this button into the topbar */}
+            <button className='signin' onClick={handlesignin}>Sign in for Admin</button> {/* Moved this button into the topbar */}
         </div>
 
         <div className='aimdiv'>
