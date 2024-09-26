@@ -4,15 +4,17 @@ body, html {
     padding: 0;
     height: 100%;
     background-color: #f0f0f0;
+    font-family: 'Poppins', sans-serif; /* Applying the Poppins font globally */
 }
 
 .topbar {
     background-color: #d3d3d3;
     height: 170px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* Aligns logo to the left and buttons to the center */
     align-items: center;
     width: 100%;
+    padding: 0 20px; /* Added padding for some spacing */
     position: fixed; /* Makes it stick to the top */
     top: 0;
     left: 0;
@@ -22,19 +24,24 @@ body, html {
 .logo {
     width: 200px;
     height: 160px;  /* Adjust the height of your logo */
-    margin-right: 150px;  /* Adjust space between the logo and buttons */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Center the buttons */
+    gap: 20px; /* Space between buttons */
 }
 
 .topbar button {
-    margin: 0 20px; /* Adjusted to create space for the Sign in button */
     padding: 15px 30px;
-    font-size: 20px;
+    font-size: 18px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
     height: 80px;
     width: 190px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .topbar button:hover {
@@ -70,28 +77,41 @@ body, html {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
 }
 
-.aim {
-    margin-top: 180px; /* Adjusted to compensate for topbar */
-    text-align: center;
-    font-size: 48px; /* Increased font size for better visibility */
-    font-weight: 700; /* Make the text bold */
-    color: #2c3e50; /* A deep blue-gray color */
-    text-transform: uppercase; /* Make all text uppercase for emphasis */
-    letter-spacing: 2px; /* Add some spacing between letters */
-    margin-bottom: 20px;
+.aimdiv {
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
 .aimpng {
-    height: 400px;
-    width: 1200px;
-    margin-left: 170px;
-    margin-bottom: 100px;
-    transition: all 0.3s ease; /* Smooth transition */
+    height: 300px; /* Decreased height of the image */
+    width: 600px; /* Decreased width of the image */
+    margin-right: 50px;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
 }
 
 .aimpng:hover {
     transform: scale(1.05); /* Slight pop-up effect */
-    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Add a shadow when hovering */
+}
+
+.aimdescription {
+    max-width: 600px;
+}
+
+.aimdescription h1 {
+    font-size: 36px;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.aimdescription p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+    font-weight: 300;
 }
 
 .about-card, .whatwedo-card {
@@ -111,7 +131,6 @@ body, html {
     box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
-/* Keeping ourcoverage card static without pop effect */
 .ourcoverage-card {
     background-color: #dcebed;
     padding: 20px;
@@ -121,49 +140,78 @@ body, html {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     margin-bottom: 80px;
-    /* No transition or transform */
 }
 
-.about-card p, .whatwedo-card p {
-    font-size: 20px;
-    color: #666;
+.disaster-card {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif; /* Applying Poppins to disaster cards */
 }
 
-.aboutus, .whatwedo{
+.disaster-image {
+    width: 100%; /* Ensure the image takes up the full width of the card */
+    height: 300px; /* Set a reduced height */
+    object-fit: cover; /* Maintain the aspect ratio while covering the area */
     margin-bottom: 20px;
-    text-align: center;
-    font-size: 48px; /* Increased font size for better visibility */
-    font-weight: 700; /* Make the text bold */
-    color: #2c3e50; /* A deep blue-gray color */
-    text-transform: uppercase; /* Make all text uppercase for emphasis */
-    letter-spacing: 2px; /* Add some spacing between letters */
-}
-
-.ourcoverage{
-    margin-bottom: 100px;
-    text-align: center;
-    font-size: 48px; /* Increased font size for better visibility */
-    font-weight: 700; /* Make the text bold */
-    color: #2c3e50; /* A deep blue-gray color */
-    text-transform: uppercase; /* Make all text uppercase for emphasis */
-    letter-spacing: 2px; /* Add some spacing between letters */
-}
-
-/* Adjusting the images inside the Our Coverage section */
-.ourcoverage-card img {
-    width: 600px; /* Set a consistent width */
-    height: 600px; /* Set a consistent height */
-    object-fit: cover; /* Ensure the image scales properly without distortion */
-    margin-bottom: 20px; /* Add some space between images and text */
-    margin-bottom: 120px;
     transition: all 0.3s ease;
 }
 
-.ourcoverage-card img:hover {
+/* Increased font size and made text bolder */
+.disaster-card h2 {
+    font-size: 32px; /* Increased font size for disaster titles */
+    font-weight: 700; /* Bold disaster titles */
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.disaster-card p {
+    font-size: 18px; /* Increased font size for descriptions */
+    font-weight: 500; /* Bold descriptions */
+    color: #666;
+    line-height: 1.6;
+}
+
+.aboutus, .whatwedo {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.ourcoverage {
+    margin-bottom: 100px;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.ourcoverage-card img, 
+.disaster-card img {
+    width: 100%; /* Ensure the image takes up the full width of the card */
+    height: 300px; /* Set a reduced height */
+    object-fit: cover; /* Maintain the aspect ratio while covering the area */
+    margin-bottom: 20px;
+}
+
+.ourcoverage-card img:hover, 
+.disaster-card img:hover {
     transform: scale(1.05); /* Slight pop-up effect */
     box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
 .ourcoverage-card h2 {
     font-size: 35px;
+    font-family: 'Poppins', sans-serif;
 }

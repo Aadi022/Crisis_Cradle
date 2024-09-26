@@ -30,6 +30,12 @@ function Chat2({socket, username, room}){
         }
     }
 
+    useEffect (function(){     //Everytime the page re-renders, the message list gets updated to the message list stored in the database
+      socket.on("previous_messages", function(prevmsg){
+        setMessageList(prevmsg);
+      })
+    })
+
     useEffect(()=>{     //This is for the receiving of the message
         socket.off("receive_message").on("receive_message", function(data){   //This is where the server is sending the message it received
             setMessageList(m=>[...m,data]);
