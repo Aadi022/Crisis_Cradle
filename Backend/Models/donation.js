@@ -2,9 +2,10 @@
 const mongoose= require("mongoose");
 
 const DonationSchema= new mongoose.Schema({
-    Donorid: String,
-    Amount: Number,
-    Date_of_transaction: Date
+    TransactionId: String,
+    Name: String,
+    MobileNumber: Number,
+    Amount: Number
 });
 
 module.exports= DonationSchema;
