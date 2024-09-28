@@ -21,13 +21,17 @@ function Mainpage() {
         navigate("/signin");
     };
 
+    const handledonate= () => {
+        navigate("/checkout");
+    }
+
     return (
         <>
             <div className="topbar">
                 <img src={logo} alt="logo" className="logo" />
                 <div className="button-container">
                     <button className="report" onClick={handlereport}>REPORT A DISASTER</button>
-                    <button className="donate">Donate</button>
+                    <button className="donate" onClick={handledonate}>Donate</button>
                     <button className="signin" onClick={handlesignin}>Sign in for Admin</button>
                 </div>
             </div>
