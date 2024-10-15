@@ -2,17 +2,16 @@
 const mongoose= require("mongoose");
 
 const DisasterSchema= new mongoose.Schema({
-    Location: String,   //Get this from the react geolocation api
+    Location:{
+        Latitude: String,
+        Longitude: String
+    },
     Town: String,
     City: String,
     State: String,
-    Disaster_Type: String,
-    Description: [{
-        desc: String
-    }],
-    Names:[{
-        fullname: String
-    }],
+    Disaster_Type: String,  //This will be chosen by the admin
+    Description: String,
+    Name: String,
     Status: Boolean  //If true, the disaster has not been subdued. If false, the disaster has been subdued
 });
 
