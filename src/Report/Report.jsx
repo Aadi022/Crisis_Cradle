@@ -1,16 +1,18 @@
 import React,{useState, useEffect} from 'react';
+import axios from 'axios';
 import "./Report.css";
 import { useNavigate } from 'react-router-dom';
 
 function Report(){
     const navigate= useNavigate();
 
-    const [name,setName]= useState(""); //Defining state variable
-    const [state,setState]= useState("");
-    const [city,setCity]= useState("");
-    const [town,setTown]= useState("");
-    const [disaster,setDisaster]= useState("");
-    const [location, setLocation] = useState({   //This is for the coordinates
+    const [name,setName]= useState(""); //Defining state variable name
+    const [state,setState]= useState(""); //State
+    const [city,setCity]= useState("");  //City
+    const [town,setTown]= useState("");  //Town
+    const [disaster,setDisaster]= useState("");  //This stores the disaster type
+    const [description, setDescription]= useState("");  //This stores the disaster description
+    const [location, setLocation] = useState({   //This is for the coordinates of the location
         latitude: null,
         longitude: null,
     });
@@ -63,8 +65,41 @@ function Report(){
         setDisaster(event.target.value);
     }
 
-    const handlesubmit= function handlesubmit(){
-        navigate("/userchat");
+    const handledescription= function handledescription(event){
+      setDescription(event.target.value);
+    }
+
+    const handlesubmit= async function handlesubmit(event){
+        event.preventDefault();
+        try{
+          const response= await axios.post("http://localhost:3000/user/report",{
+            Location:{
+              Latitude: location.latitude,
+              Longitude: location.longitude
+            },
+            Town: town,
+            City: city,
+            State: state,
+            Description: description,
+            Disaster_Type: disaster,
+            Name: name
+          });
+          if(response.status===200){
+            alert(response.data.msg);
+            navigate("/userchat");
+          }
+        }
+        catch(error){
+          if(error.response){
+            alert(error.response.data.msg);   //This is for when request has reached the backend, but there is other status code than 200
+          }
+          else if(error.request){
+            alert("No response from the server");   //This is when the request has been sent, but there is no response from the server
+          }
+          else{
+            alert("Error in reporting");
+          }
+        }
     }
 
     return(
@@ -88,7 +123,9 @@ function Report(){
                     <option value="landslide">Landslide</option>
                     <option value="tornado">Tornado</option>
                     <option value="cyclone">Cyclone</option>
-                </select> <br/>
+                </select> 
+                <h2>Enter Disaster Description(Optional):</h2>
+                <input placeholder='Enter Disaster Description' value={description} onChange={handledescription}></input><br/>
                 <button type="submit">REPORT</button>
             </form>
         </>
