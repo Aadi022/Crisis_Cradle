@@ -21,9 +21,9 @@ function Mainpage() {
         navigate("/signin");
     };
 
-    const handledonate= () => {
+    const handledonate = () => {
         navigate("/checkout");
-    }
+    };
 
     return (
         <>
@@ -68,41 +68,37 @@ function Mainpage() {
 
             <div className="ourcoverage-card">
                 <h1 className="ourcoverage">Our Coverage</h1>
-
-                <div className="disaster-card">
-                    <h2>Earthquakes</h2>
-                    <img src={earthquake} alt="earthquake" className="disaster-image" />
-                    <p>We deploy rapid response teams to earthquake-hit areas, providing search and rescue operations, temporary shelters, and medical assistance.</p>
-                </div>
-
-                <div className="disaster-card">
-                    <h2>Cyclones</h2>
-                    <img src={cyclone} alt="cyclone" className="disaster-image" />
-                    <p>Our teams ensure safe evacuation of affected communities, distribute essential supplies, and assist in recovery efforts post-cyclone.</p>
-                </div>
-
-                <div className="disaster-card">
-                    <h2>Fire</h2>
-                    <img src={fire} alt="fire" className="disaster-image" />
-                    <p>We coordinate with firefighting units to control the fire and help the victims with evacuation and medical care.</p>
-                </div>
-
-                <div className="disaster-card">
-                    <h2>Floods</h2>
-                    <img src={flood} alt="flood" className="disaster-image" />
-                    <p>We provide boats and rescue teams to evacuate people from flood-affected areas and distribute essential supplies like food and clean water.</p>
-                </div>
-
-                <div className="disaster-card">
-                    <h2>Landslides</h2>
-                    <img src={landslide} alt="landslide" className="disaster-image" />
-                    <p>Our landslide response teams focus on rescuing people trapped under debris and ensuring safe evacuation routes.</p>
-                </div>
-
-                <div className="disaster-card">
-                    <h2>Tornadoes</h2>
-                    <img src={tornado} alt="tornado" className="disaster-image" />
-                    <p>We work closely with local authorities to ensure quick recovery from tornado damage, offering relief and medical care to affected communities.</p>
+                <div className="disaster-container">
+                    <div className="disaster-card">
+                        <h2>Earthquakes</h2>
+                        <img src={earthquake} alt="earthquake" className="disaster-image" />
+                        <p>We deploy rapid response teams to earthquake-hit areas, providing search and rescue operations, temporary shelters, and medical assistance.</p>
+                    </div>
+                    <div className="disaster-card">
+                        <h2>Cyclones</h2>
+                        <img src={cyclone} alt="cyclone" className="disaster-image" />
+                        <p>Our teams ensure safe evacuation of affected communities, distribute essential supplies, and assist in recovery efforts post-cyclone.</p>
+                    </div>
+                    <div className="disaster-card">
+                        <h2>Fire</h2>
+                        <img src={fire} alt="fire" className="disaster-image" />
+                        <p>We coordinate with firefighting units to control the fire and help the victims with evacuation and medical care.</p>
+                    </div>
+                    <div className="disaster-card">
+                        <h2>Floods</h2>
+                        <img src={flood} alt="flood" className="disaster-image" />
+                        <p>We provide boats and rescue teams to evacuate people from flood-affected areas and distribute essential supplies like food and clean water.</p>
+                    </div>
+                    <div className="disaster-card">
+                        <h2>Landslides</h2>
+                        <img src={landslide} alt="landslide" className="disaster-image" />
+                        <p>Our landslide response teams focus on rescuing people trapped under debris and ensuring safe evacuation routes.</p>
+                    </div>
+                    <div className="disaster-card">
+                        <h2>Tornadoes</h2>
+                        <img src={tornado} alt="tornado" className="disaster-image" />
+                        <p>We work closely with local authorities to ensure quick recovery from tornado damage, offering relief and medical care to affected communities.</p>
+                    </div>
                 </div>
             </div>
         </>
