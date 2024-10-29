@@ -13,11 +13,6 @@ function Chat1() {
   const [showChat, setShowChat]= useState(false);   //This is a boolean state variable. This ensures that if a user joins the room, then only he can chat. If this is true then we call the Chat2 component
 
   const handleusername= function handleusername(event){
-    const input = event.target.value.toLowerCase();
-    if(input==="admin"){
-      alert("You can't be the Admin");
-      navigate("/");
-    }
     setUsername(event.target.value);
   }
 

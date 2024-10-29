@@ -28,7 +28,8 @@ function Signin(){
             if(response.status===200){
                 alert(response.data.msg);
             }
-            navigate("/disaster");
+            navigate("/visualization");
+            alert("Welcome Admin!");
         }
         catch(error){
             if(error.response){

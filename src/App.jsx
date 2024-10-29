@@ -1,10 +1,12 @@
 import Mainpage from "./Mainpage/Mainpage.jsx";
 import Report from "./Report/Report.jsx";
 import Signin from "./Signin/Signin.jsx";
-import Chat1 from "./Userchat/Chat1.jsx";
+import UserChat1 from "./Userchat/Chat1.jsx";
 import Checkout from "./Donate/Checkout.jsx";
 import DisasterList from "./Disasterinfo/Disasterinfo.jsx";
 import Resources from "./Resources/Resources.jsx";
+import AdminChat1 from "./AdminChat/Chat1.jsx";
+import Visualization from "./Visualization/Visualization.jsx";
 import React,{useState,createContext} from 'react';
 import { Route,Router,Routes } from "react-router-dom";
 
@@ -22,10 +24,12 @@ function App() {
             <Route path="/" element={<Mainpage></Mainpage>}></Route>
             <Route path="/report" element={<Report></Report>}></Route>
             <Route path="/signin" element={<Signin></Signin>}></Route>
-            <Route path="/userchat" element={<Chat1></Chat1>}></Route>
+            <Route path="/userchat" element={<UserChat1></UserChat1>}></Route>
             <Route path="/checkout" element={<Checkout></Checkout>}></Route>
             <Route path="/disaster" element={<DisasterList></DisasterList>}></Route>
             <Route path="/resources" element={<Resources></Resources>}></Route>
+            <Route path="/adminchat" element={<AdminChat1></AdminChat1>}></Route>
+            <Route path="/visualization" element={<Visualization></Visualization>}></Route>
         </Routes>
         </AdminContext.Provider>
         </>
