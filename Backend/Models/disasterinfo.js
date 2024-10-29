@@ -10,8 +10,8 @@ const DisasterSchema= new mongoose.Schema({
     City: String,
     State: String,
     Disaster_Type: String,  //This will be chosen by the admin
-    Description: String,
-    Name: String,
+    Description: [String],
+    Name: [String],
     Status: Boolean  //If true, the disaster has not been subdued. If false, the disaster has been subdued
 });
 

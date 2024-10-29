@@ -2,21 +2,21 @@
 const mongoose= require("mongoose");
 
 const ResourceSchema= new mongoose.Schema({
-    Town: String,
+    Disaster_Type: String,
     City: String,
     Workforce: Number,
     FoodResources: Number,
     FirstAid: Number,
     WaterSupply: Number,
     ClothingSupply: Number,
-    RescueTool:[{
+    RescueTool:{
         Earthquake: Number,
         Flood: Number,
         Fire: Number,
         Landslide: Number,
         Tornado: Number,
         Cyclone: Number
-    }],
+    },
     Status: String   //Dispatched/In-Transit/Delivered
 });
 

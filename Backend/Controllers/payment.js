@@ -1,3 +1,4 @@
+//This file consists of all API logic related to payment processing.
 const express = require("express");
 const Razorpay = require("razorpay");
 const bodyParser = require("body-parser");
