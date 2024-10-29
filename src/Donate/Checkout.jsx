@@ -35,7 +35,7 @@ const PaymentComponent = () => {
     }).then((t) => t.json());
 
     const options = {
-      key: "rzp_test_DEvIsmgNnBeEH2",
+      key: "rzp_test_DEvIsmgNnBeEH2", // Your Razorpay key
       amount: data.amount, // Amount is in paise
       currency: data.currency,
       name: "Test Corp",
@@ -48,9 +48,13 @@ const PaymentComponent = () => {
           razorpayPaymentId: response.razorpay_payment_id,
           razorpayOrderId: response.razorpay_order_id,
           razorpaySignature: response.razorpay_signature,
+          name: name,          
+          email: email,        
+          contact: contact,    
+          amount: amount,      
         };
     
-        const result = await fetch("http://localhost:5000/verifyPayment", {
+        const result = await fetch("http://localhost:3000/pay/verifyPayment", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -60,12 +64,9 @@ const PaymentComponent = () => {
     
         const verification = await result.json();
     
-        // You can perform further actions here after payment verification
-        if (verification.status === "Payment Verified!") {
-          // Payment verified, do whatever you need here, like updating UI, etc.
+        if (verification.status === "Payment Verified and Captured!") {
           console.log("Payment successful");
         } else {
-          // Handle payment failure scenario
           console.log("Payment verification failed");
         }
       },
@@ -81,7 +82,6 @@ const PaymentComponent = () => {
     
     const rzp = new Razorpay(options);
     rzp.open();
-    
   };
 
   return (

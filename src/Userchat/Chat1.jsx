@@ -1,4 +1,4 @@
-import Chat2 from './Chat2.jsx';
+import Chat2 from './Chat2.jsx';  
 import './Chat.css';
 import io from 'socket.io-client';
 import { useState } from 'react';
@@ -9,7 +9,7 @@ function Chat1() {
 
   const [username,setUsername]= useState("");   //This is the state variable for the username
   const [room, setRoom]= useState("");   //This is the state variable for the room name
-  const [showChat, setShowChat]= useState(false);   //This is a boolean state variable. This ensures that if a user joins the room, then only he can chat.
+  const [showChat, setShowChat]= useState(false);   //This is a boolean state variable. This ensures that if a user joins the room, then only he can chat. If this is true then we call the Chat2 component
 
   const handleusername= function handleusername(event){
     setUsername(event.target.value);
