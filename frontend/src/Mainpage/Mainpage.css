@@ -1,0 +1,163 @@
+/* Mainpage.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #f0f0f0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.topbar {
+    background-color: #d3d3d3;
+    height: 170px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.logo {
+    width: 200px;
+    height: 160px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.topbar button {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: 80px;
+    width: 190px;
+}
+
+.topbar button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.signin {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.donate {
+    background-color: #ff9800;
+    color: white;
+}
+
+.report {
+    padding: 20px 40px;
+    font-size: 18px;
+    background-color: #f44336;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: 100px;
+    width: 300px;
+}
+
+.report:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.aimdiv {
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.aimpng {
+    height: 300px;
+    width: 600px;
+    margin-right: 50px;
+    transition: all 0.3s ease;
+}
+
+.aimpng:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.aimdescription {
+    max-width: 600px;
+}
+
+.about-card, .whatwedo-card {
+    background-color: #dcebed;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 80px;
+    transition: all 0.3s ease;
+}
+
+.about-card:hover, .whatwedo-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.ourcoverage-card {
+    background-color: #dcebed;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.ourcoverage-card .disaster-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.disaster-card {
+    background-color: #fff;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.disaster-image {
+    width: auto;
+    height: 300px;
+    object-fit: cover;
+    margin: 0 auto 20px auto;
+    transition: all 0.3s ease;
+}
+
+.aboutus, .whatwedo, .ourcoverage {
+    margin-bottom: 20px;
+    font-size: 48px;
+    font-weight: 700;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}

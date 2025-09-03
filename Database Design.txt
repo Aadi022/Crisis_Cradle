@@ -1,0 +1,18 @@
+DATABASE DESIGN
+
+1) CHAT DATABASE- This will contain json data of all chats that have happened. Each state will have its unique document, and it will have an array of json doc, which will contain all the 
+   chat info. The fields will be- City, array of json which will have message details. The json will be room, author, message, time.
+
+2) ADMIN DATABASE- This will contain the data of all admin. Job ID, First Name, Last name, Email, Password.
+
+3) DISASTER DATABASE- This will contain the exact location (longitude and latitude), town, city, state, type of disaster, array containing the description of disaster, array containing the names of the people, disaster status
+
+4) DEPLOYED RESOURCES DATABASE- This will contain the resources which are deployed to the calamity site. The fields will be- city deployed, workforce, food resources, first aid kits, water supplies, clothing supplies, rescue tools (array of types of rescue tools: earthquake, flood, fire, landslide, tornado, cyclone), status of the kits deployed. ID will be the deployment id.
+
+5) Donation database- Donorid,amount,date. 
+
+
+AVAILABLE RESOURCES DATABASE- This will contain the available resources. The fields will be- workforce, food resources, first aid kits, water supplies, clothing supplies, rescue tools
+
+
+aadityamta- am123

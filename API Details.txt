@@ -1,0 +1,27 @@
+API Details
+
+1) Transfer Client report on database - POST   //DONE
+2) Sign in - POST request                      //DONE
+3) List of all disaster reports- GET          //DONE
+4) Deploy resources- POST          //DONE             
+5) GET request for D3JS
+
+
+1) Transfer Client report on database - POST : Already done
+
+2) Signin- POST: Create a signup route. Enter hashed passwords by creating a singup route where you will load up the database by running the route using postman. After that create the signin route which will get fetched in the frontend. Do all the JWT stuff on signin.
+
+3) List of all disaster reports- GET: Get all the disaster reports in the database. Each List of the disaster report will be a unique set of City+Disaster. So create a 2-D Array, say x.
+x[i] will be a unique set of City+Disaster_Type. 
+
+4) Deploy resources- POST: Each document sent to the database will be a record of the items sent to the particular resources. There will be several documents, since we want to keep a record.
+
+5) Chat- Check the local storage. If jwt can verify it, then only enter admin, otherwise can't enter the admin. Other than that, the chat application is already ready. Just route it to /userchat. Just make the already mentioned changes in the code. Use axios fetch on submitting.
+
+
+6) Logout- Clear the local storage
+
+
+
+
+      FIGURE OUT D3JS AFTER ALL THIS
