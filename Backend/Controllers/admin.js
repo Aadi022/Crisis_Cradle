@@ -8,7 +8,8 @@ const jwt= require("jsonwebtoken");
 const bcrypt= require("bcryptjs");
 const saltrounds= 12;
 const loginmiddleware= require("../Helper/admin.js");
-const JWTsecret= "server123";
+require('dotenv').config();
+const JWTsecret= process.env.JWTSECRET;
 
 
 router.post("/signup",async function(req,res){     //Creating a user(will be only used in Postman, not integrated with frontend)

@@ -2,6 +2,8 @@ const mongoose= require("mongoose");
 const DisasterSchema= require("../Models/disasterinfo.js");
 const AdminSchema= require("../Models/admin.js");
 const ResourceSchema= require("../Models/resources.js");
+require('dotenv').config();
+const mongo_url= process.env.MONGO_URL;
 
 try{
     mongoose.connect("mongodb+srv://aadityamta:am123@crisiscradle.etz1m.mongodb.net/");

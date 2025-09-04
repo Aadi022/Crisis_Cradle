@@ -5,13 +5,18 @@ const bodyParser = require("body-parser");
 const crypto = require("crypto");
 const cors = require("cors");
 const router= express.Router();
+require('dotenv').config();
+const keyid= process.env.KEY_ID;
+const keysecret= process.env.KEY_SECRET;
+
+
 
 router.use(bodyParser.json());
 router.use(cors());
 
 const razorpay = new Razorpay({
-  key_id: 'rzp_test_DEvIsmgNnBeEH2',
-  key_secret: 'RQHuXe8XPPXPcUOaPQvjQl6y'
+  key_id: keyid,
+  key_secret: keysecret
 });
 
 // Endpoint to create an order
@@ -35,7 +40,7 @@ router.post("/createOrder", async (req, res) => {
 // Endpoint to verify payment signature
 router.post("/verifyPayment", (req, res) => {
   const { razorpay_order_id, razorpay_payment_id, razorpay_signature } = req.body;
-  const key_secret = "RQHuXe8XPPXPcUOaPQvjQl6y";
+  const key_secret = keysecret;
 
   const shasum = crypto.createHmac("sha256", key_secret);
   shasum.update(`${razorpay_order_id}|${razorpay_payment_id}`);
