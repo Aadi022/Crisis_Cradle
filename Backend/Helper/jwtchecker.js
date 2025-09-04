@@ -1,6 +1,6 @@
-//This will be called for almost every route, as it verifies the jwt token from the headers-authorization
+//This will be called for almost every route, as it verifies the jwt access token from the headers-authorization
 require('dotenv').config();
-const JWT_SECRET= process.env.JWTSECRET;
+const JWT_SECRET= process.env.JWTSECRET_ACCESS;
 const jwt= require("jsonwebtoken");
 
 function authMiddleware(req,res,next){
