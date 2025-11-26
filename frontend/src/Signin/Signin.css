@@ -1,0 +1,53 @@
+/* Global Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  /* Signin Component Styles */
+  
+  .Signin {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .Signin h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .Signin form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .Signin h2 {
+    margin-bottom: 10px;
+  }
+  
+  .Signin input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+  }
+  
+  .Signin button[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .Signin button[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
